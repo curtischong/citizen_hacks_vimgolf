@@ -1,0 +1,30 @@
+A letter from Curtis
+
+Hello! I hope that you’re having a blast meeting new people and working on your ideas at Citizen hacks!
+
+While you type away on your laptops I thought that it would be cool to tell a story about the team and how we planned this event.
+
+It began when we entered university.
+
+const YEAR = 2018
+
+let group = ['Marcel', 'Mio', 'Ben']
+
+let add_member = (group, name) => {
+  group.push(name);
+  console.log(`Added ${name}`);
+};
+
+let add_members = (group, names) => {
+  names.forEach((name) => {
+    add_member(group, name);
+  });
+};
+
+// assembling friends
+let new_members = ['Daniel', 'Curtis', 'Michael']
+add_members(group, new_members);
+
+
+Several months passed. 
+
