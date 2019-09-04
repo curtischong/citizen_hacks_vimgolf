@@ -6,6 +6,9 @@ While you type away on your laptops I thought that it would be cool to tell a st
 
 It began when we entered university.
 
+
+// Part 1: Assembling the team
+
 const YEAR = 2018
 
 let group = ['Marcel', 'Mio', 'Ben']
@@ -26,5 +29,137 @@ let new_members = ['Daniel', 'Curtis', 'Michael']
 add_members(group, new_members);
 
 
-Several months passed. 
+// Several months passed. 
+
+let fs = require('fs');
+let october_diary = JSON.parse(fs.readFileSync('October_2019.json', 'utf8'));
+
+let start_date = 
+
+october_diary['school'] = True
+october_diary['free_time'] = 'rip'
+october_diary['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Audrey', 'Mirjana'];
+add_members(group, october_diary.new_friends);
+
+let team = new CitizenHacks(group);
+team.publish_website();
+
+// Part 2: Finding Funding
+
+const request = require('request');
+
+// Talking to sponsors
+let request_sponsorship = (company_name) => {
+  request(company_name + 'sponsorship_emails', (err, res, reply_body) => {
+    if(response.statusCode != 200){
+      console.log(`${company_name} couldn't sponsor us with error:`);
+      console.log(err);
+      return;
+    }
+    
+    if(details_fuzzy(reply_body)){
+      team.coordinate_specifics();
+    }
+  });
+};
+
+let details_fuzzy = (reply) => {
+  if(reply.sponsorship_tier == null or reply.reply_contract == 'not_signed' or reply.deliverables = undefined){
+    return true;
+  }
+  return false;
+}
+
+
+// Finding sponsors
+let find_companies = (contacted_companies) => {
+  let new_companies = [];
+  let found = search_google(['privacy_companies', 'security', 'encryptio']);
+  found = found.concat(search_google_maps(['Toronto Tech Companies']));
+  found = found.concat(search_linkedin(['old_friends', 'new_connections']));
+  found.forEach((company) => {
+    if(!contacted_companies.has(company)){
+      new_companies.push(company);
+    }
+  });
+  return new_companies;
+}
+
+
+let current_date = new Date()
+let event_date = new Date(2018, 11, 23);
+let contacted_companies = new Set();
+
+while(current_date < event_date){
+  let companies = find_companies(contacted_companies);
+
+  // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+  let selected_company = companies[Math.floor(Math.random()*companies.length)];
+
+  request_sponsorship(selected_company);
+  contacted_companies.add(selected_company);
+}
+
+
+// oh no
+break;
+venue.secured = false;
+team.cancel_event();
+
+
+
+// Part 3: A New Hope
+// write about MLH
+
+event_date = new Date(2019, 9, 28);
+
+while(current_date < event_date){
+  let companies = find_companies(contacted_companies);
+
+  // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+  let selected_company = companies[Math.floor(Math.random()*companies.length)];
+
+  request_sponsorship(selected_company);
+  contacted_companies.add(selected_company);
+}
+
+privacy_commissioner_of_canada.grant_accepted("Citizen Hacks");
+
+
+
+// Part 4: Applications
+
+// returns an iterator
+promotional_graphics = team.create_graphics(['time', 'coffee', 'love']);
+
+const attrition_rate = 0.3;
+
+while(current_date < application_close){
+  team.promote_event(promotional_graphics.next());
+}
+
+console.log(applications.length);
+// 394
+
+hackathon_stats = {
+  app
+}
+
+let review_applications = () => {
+  let num_applications =
+  let num_heartbreaks = 
+}
+
+
+// Part 4: The final stretch
+
+
+
+
+
+
+
+
+
+
 
