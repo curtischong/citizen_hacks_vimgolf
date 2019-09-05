@@ -1,0 +1,19 @@
+// Part 8: The Welcome Party
+
+const http = require('http');
+
+const hostname = 'csi.annex';
+const port = 0906;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+let welcome = `
+Thanks for playing
+`
+  res.end(welcome);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Nerding out at ${hostname} on ${port}!`);
+});

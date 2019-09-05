@@ -1,0 +1,29 @@
+// Part 6: A New Hope
+
+event_date = new Date(2019, 9, 28);
+
+while(current_date < event_date){
+  let companies = find_companies(contacted_companies);
+
+  // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+  let selected_company = companies[Math.floor(Math.random()*companies.length)];
+
+  request_sponsorship(selected_company);
+  contacted_companies.add(selected_company);
+}
+
+privacy_commissioner_of_canada.grant_accepted(Citizen_Hacks);
+
+let MLH = require('mlh');
+
+class Citizen_Hacks extends MLH{
+  // ...
+}
+
+keybase.sponsor(Citizen_Hacks);
+Feroot.sponsor(Citizen_Hacks);
+Easy_DNS.sponsor(Citizen_Hacks);
+Ada.sponsor(Citizen_Hacks);
+
+
+team.find_speakers();

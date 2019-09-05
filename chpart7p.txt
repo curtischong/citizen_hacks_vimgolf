@@ -1,0 +1,29 @@
+// Part 7: Applications
+
+// returns an iterator
+promotional_graphics = team.create_graphics(['time', 'coffee', 'love']);
+
+
+while(current_date < application_close){
+  team.promote_event(promotional_graphics.next());
+}
+
+let applications = website.download_applications();
+console.log(applications.length);
+// 394
+
+const rsvp_attrition_rate = 0.3;
+let venue_capacity = // TODO: Find this number
+
+let break_hearts = (applications) => {
+  let broken_hearts = [];
+  applications.forEach((application) => {
+    if(does_not_care_about_event(application)){
+      broken_hearts.push(application);
+      return;
+    }
+  });
+  return broken_hearts;
+}
+
+team.accept_applicants;

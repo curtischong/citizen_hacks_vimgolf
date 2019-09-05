@@ -1,0 +1,16 @@
+// Part 1: The Idea
+
+const YEAR = 2018
+
+let group = ['Marcel','Mio','Benn']
+
+let add_member = (group, name) => {
+  group.push(name);
+  console.log(`Added ${name}`);
+};
+
+let add_members = (group, names) => {
+  names.forEach((name) => {
+    add_member(group, name);
+  });
+};
