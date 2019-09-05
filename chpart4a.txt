@@ -17,7 +17,7 @@ let request_sponsorship = (company_name) => {
 };
 
 let details_fuzzy = (reply) => {
-  if(reply.sponsorship_tier == null or
+  if(reply.sponsorship_tier === null or
      reply.reply_contract === 'not_signed' or
      reply.deliverables === undefined){
     return true;

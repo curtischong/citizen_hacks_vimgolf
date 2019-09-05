@@ -14,16 +14,30 @@ while(current_date < event_date){
 
 privacy_commissioner_of_canada.grant_accepted(Citizen_Hacks);
 
+// Our first MLH hackathon!
 let MLH = require('mlh');
 
 class Citizen_Hacks extends MLH{
   // ...
 }
 
-keybase.sponsor(Citizen_Hacks);
+// Main Sponsors
+CSI_Annex.Sponsor(Citizen_Hacks);
+Keybase.sponsor(Citizen_Hacks);
 Feroot.sponsor(Citizen_Hacks);
 Easy_DNS.sponsor(Citizen_Hacks);
 Ada.sponsor(Citizen_Hacks);
 
+// Other Sponsors
+Shirtliff_Hinds_Law.sponsor(Citizen_Hacks);
+Github.sponsor(Citizen_Hacks);
+Education_For_Digital_Peace.sponsor(Citizen_Hacks);
+Fastmail.sponsor(Citizen_Hacks);
+Mattermost.sponsor(Citizen_Hacks);
+ProtonMail.sponsor(Citizen_Hacks);
+Points.sponsor(Citizen_Hacks);
+Norton_Rose_Fulbright.sponsor(Citizen_Hacks);
+Waterloo_Engineering_Society.sponsor(Citizen_Hacks);
+Sticker_Mule.sponsor(Citizen_Hacks);
 
 team.find_speakers();

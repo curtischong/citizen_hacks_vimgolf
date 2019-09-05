@@ -21,3 +21,15 @@ let decide_fate = (fate) => {
 }
 
 decide_fate("postpone_event");
+
+/* Our Plan
+Month Jan: Study
+Month Feb: Study
+Month Mar: Study
+Month Apr: Study
+Month May: Plan
+Month Jun: Plan
+Month Jul: Plan
+Month Aug: Plan
+Month Sep: Cross Fingers
+*/

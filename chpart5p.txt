@@ -1,7 +1,7 @@
 // Part 5: Bad News
+
 break;
 venue.secured = false;
-
 const timeLeft = "1 month";
 
 let decideFate = (fate) => {
@@ -9,7 +9,6 @@ let decideFate = (fate) => {
     case "carryOn":
       team.dropOutOfSchool();
       team.getNewJob("citizenHacks");
-      break;
     case "cancelEvent":
       let brokenHearts = "allOfThem";
     case "postponeEvent":
@@ -18,3 +17,15 @@ let decideFate = (fate) => {
   }
 }
 decide_fate("postpone_event");
+
+/* Our Plan
+Month: Jan Study
+Month: Feb Study
+Month: Mar Study
+Month: Apr Study
+Month: May Plan
+Month: Jun Plan
+Month: Jul Plan
+Month: Aug Plan
+Month: Sep Cross Fingers
+*/
