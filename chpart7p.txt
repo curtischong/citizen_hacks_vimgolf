@@ -14,6 +14,7 @@ console.log(applications.length);
 const rsvp_attrition_rate = 0.3;
 let venue_capacity = // TODO: Find this number
 
+//TODO: Write Docstrings
 let break_hearts = (applications) => {
   let broken_hearts = [];
   applications.forEach((applicat) => {

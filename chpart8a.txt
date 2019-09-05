@@ -2,15 +2,12 @@
 
 let count_dietary_restrictions = (applications) => {
   let n = applications.length;
-  let restrictions = new Map()
+  let restrictions = new Map();
   for(let i = 0; i < n; i++){
     let application = applications[i];
     let diet_restriction = application.dietary_restriction;
-    if(restrictions.has(diet_restriction)){
-      restrictions.set(diet_restriction, restrictions.get(diet_restriction) + 1);
-    }else{
-      restrictions.set(diet_restriction, 0);
-    }
+    let restriction_count = restrictions.has(diet_restriction) ? restrictions.get(diet_restriction) + 1) : 0;
+    restrictions.set(diet_restriction, restriction_count);
   }
   return restrictions;
 }
@@ -18,17 +15,17 @@ let count_dietary_restrictions = (applications) => {
 let dietary_restrictions = count_dietary_restrictions(applications);
 team.factorFood(dietary_restrictions);
 
-let handle_buses = () => {
+let get_applicants_need_bus = (schools) => {
   const {Client} = require('pg');
   const applicant_db = new Client();
   await applicant_db.connect();
 
-  let send_bus_to_schools = ['Waterloo'];
 
-  const res = await applicant_db.query('SELECT * FROM applications WHERE school = $1', send_bus_to_schools);
-  bus_applicants = res.rows;
-  team.send_bus_email(bus_applicants);
+  const res = await applicant_db.query('SELECT * FROM applications WHERE school = $1', schools);
   await client.end()
+  return res.rows;
 }
 
-handle_buses();
+let send_bus_to_schools = ['Waterloo'];
+bus_applicants = get_applicants_need_bus(send_bus_to_schools);
+team.send_bus_email(bus_applicants);

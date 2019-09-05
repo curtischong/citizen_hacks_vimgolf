@@ -17,6 +17,11 @@ const rsvp_attrition_rate = 0.3;
 let venue_capacity = 150; // hackers
 
 let break_hearts = (applications) => {
+  /**
+   * Tells applicants that we can't accept them
+   * @param {[Application]} applications - Hacker Applications.
+   * @return {[Application]} - Hackers that aren't attending.
+   */
   let broken_hearts = [];
   applications.forEach((application) => {
     if(does_not_care_about_event(application)){
