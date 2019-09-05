@@ -7,11 +7,11 @@ While you type away on your laptops I thought that it would be cool to tell a st
 It began when we entered university.
 
 
-// Part 1: Assembling the team
+// Part 1: The Idea
 
 const YEAR = 2018
 
-let group = ['Marcel', 'Mio', 'Ben']
+let group = ['Marcel', 'Mio', 'Benn']
 
 let add_member = (group, name) => {
   group.push(name);
@@ -24,17 +24,14 @@ let add_members = (group, names) => {
   });
 };
 
+// Part 2: Assembling the team
+
 // assembling friends
 let new_members = ['Daniel', 'Curtis', 'Michael']
 add_members(group, new_members);
 
-
-// Several months passed. 
-
 let fs = require('fs');
 let october_diary = JSON.parse(fs.readFileSync('October_2019.json', 'utf8'));
-
-let start_date = 
 
 october_diary['school'] = True
 october_diary['free_time'] = 'rip'
@@ -44,7 +41,36 @@ add_members(group, october_diary.new_friends);
 let team = new CitizenHacks(group);
 team.publish_website();
 
-// Part 2: Finding Funding
+// Part 3: Finding Sponsors
+let find_companies = (contacted_companies) => {
+  let new_companies = [];
+  let found = search_google(['privacy_companies', 'security', 'encryptio']);
+  found = found.concat(search_google_maps(['Toronto Tech Companies']));
+  found = found.concat(search_linkedin(['old_friends', 'new_connections']));
+  found.forEach((company) => {
+    if(!contacted_companies.has(company)){
+      new_companies.push(company);
+    }
+  });
+  return new_companies;
+}
+
+let current_date = new Date();
+let event_date = new Date(2018, 11, 23);
+let contacted_companies = new Set();
+
+while(current_date < event_date){
+  let companies = find_companies(contacted_companies);
+
+  // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+  let selected_company = companies[Math.floor(Math.random()*companies.length)];
+
+  request_sponsorship(selected_company);
+  contacted_companies.add(selected_company);
+}
+
+
+// Part 4: Contacting Sponsors
 
 const request = require('request');
 
@@ -70,46 +96,29 @@ let details_fuzzy = (reply) => {
   return false;
 }
 
-
-// Finding sponsors
-let find_companies = (contacted_companies) => {
-  let new_companies = [];
-  let found = search_google(['privacy_companies', 'security', 'encryptio']);
-  found = found.concat(search_google_maps(['Toronto Tech Companies']));
-  found = found.concat(search_linkedin(['old_friends', 'new_connections']));
-  found.forEach((company) => {
-    if(!contacted_companies.has(company)){
-      new_companies.push(company);
-    }
-  });
-  return new_companies;
-}
-
-
-let current_date = new Date()
-let event_date = new Date(2018, 11, 23);
-let contacted_companies = new Set();
-
-while(current_date < event_date){
-  let companies = find_companies(contacted_companies);
-
-  // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
-  let selected_company = companies[Math.floor(Math.random()*companies.length)];
-
-  request_sponsorship(selected_company);
-  contacted_companies.add(selected_company);
-}
-
-
-// oh no
+// Part 5: Bad News
 break;
 venue.secured = false;
-team.cancel_event();
+
+const time_left = "1 month";
+
+let decide_fate = (fate) => {
+  switch(fate){
+    case "carry_on":
+      team.drop_out_of_school();
+      team.get_new_job("Citizen_Hacks");
+      break;
+    case "cancel_event":
+      let broken_hearts = "all_of_them";
+    case "postpone_event":
+      let broken_hearts = "all_of_them";
+      let hope = "beyond_the_horizon";
+  }
+}
+decide_fate("postpone_event");
 
 
-
-// Part 3: A New Hope
-// write about MLH
+// Part 6: A New Hope
 
 event_date = new Date(2019, 9, 28);
 
@@ -123,37 +132,94 @@ while(current_date < event_date){
   contacted_companies.add(selected_company);
 }
 
-privacy_commissioner_of_canada.grant_accepted("Citizen Hacks");
+privacy_commissioner_of_canada.grant_accepted(Citizen_Hacks);
+
+let MLH = require('mlh');
+
+class Citizen_Hacks extends MLH{
+  // ...
+}
+
+keybase.sponsor(Citizen_Hacks);
+Feroot.sponsor(Citizen_Hacks);
+Easy_DNS.sponsor(Citizen_Hacks);
+Ada.sponsor(Citizen_Hacks);
 
 
+team.find_speakers();
 
-// Part 4: Applications
+// Part 7: Applications
 
 // returns an iterator
 promotional_graphics = team.create_graphics(['time', 'coffee', 'love']);
 
-const attrition_rate = 0.3;
 
 while(current_date < application_close){
   team.promote_event(promotional_graphics.next());
 }
 
+let applications = website.download_applications();
 console.log(applications.length);
 // 394
 
-hackathon_stats = {
-  app
+const rsvp_attrition_rate = 0.3;
+let venue_capacity = // TODO: Find this number
+
+let break_hearts = (applications) => {
+  let broken_hearts = [];
+  applications.forEach((application) => {
+    if(does_not_care_about_event(application)){
+      broken_hearts.push(application);
+      return;
+    }
+  });
+  return broken_hearts;
 }
 
-let review_applications = () => {
-  let num_applications =
-  let num_heartbreaks = 
+team.accept_applicants;
+
+
+// Part 8: Handling Logistics
+
+let count_dietary_restrictions = (applications) => {
+  let n = applications.length;
+  let restrictions = new Map()
+  for(let i = 0; i < n; i++){
+    let application = applications[i];
+    let diet_restriction = application.dietary_restriction;
+    if(restrictions.has(diet_restriction)){
+      restrictions.set(diet_restriction, restrictions.get(diet_restriction) + 1);
+    }else{
+      restrictions.set(diet_restriction, 0);
+    }
+  }
+  return restrictions;
 }
 
+let dietary_restrictions = count_dietary_restrictions(applications);
+team.factorFood(dietary_restrictions);
 
-// Part 4: The final stretch
+// Transportation!
 
+// Part 8: The Welcome Party
 
+const http = require('http');
+
+const hostname = 'csi.annex';
+const port = 0906;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+let welcome = `
+Thanks for playing
+`
+  res.end(welcome);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Nerding out at ${hostname} on ${port}!`);
+});
 
 
 
