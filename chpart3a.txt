@@ -1,13 +1,12 @@
 // Part 3: Finding Sponsors
+
 let find_companies = (contacted_companies) => {
   let new_companies = [];
-  let found = search_google(['privacy_companies', 'security', 'encryptio']);
+  let found = search_google(['Privacy Companies', 'Security', 'Encryption']);
   found = found.concat(search_google_maps(['Toronto Tech Companies']));
-  found = found.concat(search_linkedin(['old_friends', 'new_connections']));
+  found = found.concat(search_linkedin(['Old Friends', 'New Connections']));
   found.forEach((company) => {
-    if(!contacted_companies.has(company)){
-      new_companies.push(company);
-    }
+    if(!contacted_companies.has(company)) new_companies.push(company);
   });
   return new_companies;
 }

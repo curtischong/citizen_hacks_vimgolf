@@ -1,8 +1,9 @@
 // Part 7: Applications
 
 // returns an iterator
-promotional_graphics = team.create_graphics(['time', 'coffee', 'love']);
-
+promotional_graphics = team.create_graphics(['time',
+                                             'coffee',
+                                             'love']);
 
 while(current_date < application_close){
   team.promote_event(promotional_graphics.next());

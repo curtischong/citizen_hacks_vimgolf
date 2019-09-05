@@ -2,19 +2,19 @@
 break;
 venue.secured = false;
 
-const time_left = "1 month";
+const timeLeft = "1 month";
 
-let decide_fate = (fate) => {
+let decideFate = (fate) => {
   switch(fate){
-    case "carry_on":
-      team.drop_out_of_school();
-      team.get_new_job("Citizen_Hacks");
+    case "carryOn":
+      team.dropOutOfSchool();
+      team.getNewJob("citizenHacks");
       break;
-    case "cancel_event":
-      let broken_hearts = "all_of_them";
-    case "postpone_event":
-      let broken_hearts = "all_of_them";
-      let hope = "beyond_the_horizon";
+    case "cancelEvent":
+      let brokenHearts = "allOfThem";
+    case "postponeEvent":
+      let brokenHearts = "allOfThem";
+      let hope = "beyondTheHorizon";
   }
 }
 decide_fate("postpone_event");

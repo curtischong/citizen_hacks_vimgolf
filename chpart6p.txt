@@ -8,8 +8,8 @@ while(current_date < event_date){
   // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
   let selected_company = companies[Math.floor(Math.random()*companies.length)];
 
-  request_sponsorship(selected_company);
-  contacted_companies.add(selected_company);
+  request_sponsorship();
+  contacted_companies.add();
 }
 
 privacy_commissioner_of_canada.grant_accepted(Citizen_Hacks);

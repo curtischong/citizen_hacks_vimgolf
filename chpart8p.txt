@@ -19,13 +19,13 @@ let dietary_restrictions = count_dietary_restrictions(applications);
 team.factorFood(dietary_restrictions);
 
 let handle_buses = () => {
-  const {Client} = require('pg')
-  const applicant_db = new Client()
-  await applicant_db.connect()
+  const {Client} = require('pg');
+  const applicant_db = new Client();
+  await applicant_db.connect();
 
-  let send_bus_to_schools = ['Waterloo']
+  let send_bus_to_schools = ['Waterloo'];
 
-  const res = await applicant_db.query('SELECT * from applications where school = $1', send_bus_to_schools)
+  const res = await applicant_db.query('SELECT * from applications where school = $1', send_bus_to_schools);
   bus_applicants = res.rows;
   team.send_bus_email(bus_applicants);
   await client.end()

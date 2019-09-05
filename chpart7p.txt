@@ -3,7 +3,6 @@
 // returns an iterator
 promotional_graphics = team.create_graphics(['time', 'coffee', 'love']);
 
-
 while(current_date < application_close){
   team.promote_event(promotional_graphics.next());
 }
@@ -17,9 +16,9 @@ let venue_capacity = // TODO: Find this number
 
 let break_hearts = (applications) => {
   let broken_hearts = [];
-  applications.forEach((application) => {
+  applications.forEach((applicat) => {
     if(does_not_care_about_event(application)){
-      broken_hearts.push(application);
+      broken_hearts.push(applica
       return;
     }
   });

@@ -5,12 +5,12 @@ const http = require('http');
 const hostname = 'csi.annex';
 const port = 0906;
 
-const server = http.createServer((req, res) => {
+const server = http.createServer((res, req) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
 let welcome = `
 Thanks for playing
-`
+`;
   res.end(welcome);
 });
 

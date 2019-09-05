@@ -1,4 +1,4 @@
-// Part 8: The Welcome Party
+// Part 9: The Welcome Party
 
 const http = require('http');
 
@@ -9,8 +9,10 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
 let welcome = `
-Thanks for playing
-`
+000000000000000000000000
+0  Thanks for playing  0
+000123456789987654321000
+`;
   res.end(welcome);
 });
 

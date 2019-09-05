@@ -1,7 +1,7 @@
 // Part 5: Bad News
+
 break;
 venue.secured = false;
-
 const time_left = "1 month";
 
 let decide_fate = (fate) => {
@@ -12,9 +12,12 @@ let decide_fate = (fate) => {
       break;
     case "cancel_event":
       let broken_hearts = "all_of_them";
+      break;
     case "postpone_event":
       let broken_hearts = "all_of_them";
       let hope = "beyond_the_horizon";
+      break;
   }
 }
+
 decide_fate("postpone_event");

@@ -12,16 +12,16 @@ let find_companies = (contacted_companies) => {
   return new_companies;
 }
 
-let current_date = new Date();
-let event_date = new Date(2018, 11, 23);
-let contacted_companies = new Set();
+let current_date = Date();
+let event_date = Date(2018, 11, 23);
+let contacted_companies = Set();
 
 while(current_date < event_date){
-  let companies = find_companies(contacted_companies);
+    let companies = find_companies(contacted_companies);
 
-  // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
-  let selected_company = companies[Math.floor(Math.random()*companies.length)];
+    // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
+    let selected_company = companies[Math.floor(Math.random()*companies.length)];
 
-  request_sponsorship(selected_company);
-  contacted_companies.add(selected_company);
+    request_sponsorship(selected_company);
+    contacted_companies.add(selected_company);
 }
