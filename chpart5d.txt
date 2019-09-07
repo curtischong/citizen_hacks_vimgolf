@@ -1,0 +1,51 @@
+5c5
+< const time_left = "1 month";
+---
+> const timeLeft = "1 month";
+7c7
+< let decide_fate = (fate) => {
+---
+> let decideFate = (fate) => {
+9,19c9,16
+<     case "carry_on":
+<       team.drop_out_of_school();
+<       team.get_new_job("Citizen_Hacks");
+<       break;
+<     case "cancel_event":
+<       let broken_hearts = "all_of_them";
+<       break;
+<     case "postpone_event":
+<       let broken_hearts = "all_of_them";
+<       let hope = "beyond_the_horizon";
+<       break;
+---
+>     case "carryOn":
+>       team.dropOutOfSchool();
+>       team.getNewJob("citizenHacks");
+>     case "cancelEvent":
+>       let brokenHearts = "allOfThem";
+>     case "postponeEvent":
+>       let brokenHearts = "allOfThem";
+>       let hope = "beyondTheHorizon";
+22d18
+< 
+26,34c22,30
+< Month Jan: Study
+< Month Feb: Study
+< Month Mar: Study
+< Month Apr: Study
+< Month May: Plan
+< Month Jun: Plan
+< Month Jul: Plan
+< Month Aug: Plan
+< Month Sep: Cross Fingers
+---
+> Month: Jan Study
+> Month: Feb Study
+> Month: Mar Study
+> Month: Apr Study
+> Month: May Plan
+> Month: Jun Plan
+> Month: Jul Plan
+> Month: Aug Plan
+> Month: Sep Cross Fingers

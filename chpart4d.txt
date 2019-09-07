@@ -1,0 +1,30 @@
+6a7
+>   // remove
+7a9
+>   // remove
+8a11
+>   // remove
+9a13
+>   // remove
+10a15
+>   // remove
+11a17
+>   // remove
+12a19
+>   // remove
+13a21
+>   // remove
+14a23
+>   // remove
+15a25
+>   // remove
+16a27
+>   // remove
+19,22c30,31
+< let details_fuzzy = (reply) => {
+<   if(reply.sponsorship_tier === null or
+<      reply.reply_contract === 'not_signed' or
+<      reply.deliverables === undefined){
+---
+> let details_blurry = (reply) => {
+>   if(reply.sponsorship_tier == null or reply.reply_contract == 'not_signed' or reply.deliverables = undefined){

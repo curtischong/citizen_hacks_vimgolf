@@ -1,0 +1,32 @@
+3,5c3,5
+< // Assembling Friends
+< let new_members = ['Daniel', 'Curtis', 'Michael', 'Audrey', 'Mirjana'];
+< add_members(group, new_members);
+---
+> // assembling friends
+> let new_members = ['Daniel', 'Curtis', 'Michael']
+> add_members(group, new_members)
+7,8c7,8
+< let fs = require('fs');
+< let october = JSON.parse(fs.readFileSync('October_2019.json', 'utf8'));
+---
+> let fs = require('fs')
+> let october_diary = JSON.parse(fs.readFileSync('October_2019.json', 'utf8'))
+10,13c10,13
+< october['school'] = true;
+< october['free_time'] = 'rip';
+< october['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin'];
+< add_members(group, october.new_friends);
+---
+> october_diary['school'] = True
+> october_diary['free_time'] = 'rip'
+> october_diary['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Audrey', 'Mirjana']
+> add_members(group, october_diary.new_friends)
+15,16c15,16
+< let team = new CitizenHacks(group);
+< team.publish_website();
+\ No newline at end of file
+---
+> let team = new CitizenHacks(group)
+> team.publish_website()
+\ No newline at end of file

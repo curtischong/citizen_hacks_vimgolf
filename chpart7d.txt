@@ -1,0 +1,30 @@
+4,10c4
+< promotional_graphics = team.create_graphics(['time',
+<                                              'outlets',
+<                                              'coffee',
+<                                              'love',
+<                                              'suggestions',
+<                                              'agreement',
+<                                              'appreciation']);
+---
+> promotional_graphics = team.create_graphics([time, outlets, coffee, love, suggestions, agreement, appreciation]);
+21c15
+< let venue_capacity = 150; // hackers
+---
+> let venue_capacity = // TODO: Find this number
+22a17
+> //TODO: Write Docstrings
+24,28d18
+<   /**
+<    * Tells applicants that we can't accept them
+<    * @param {[Application]} applications - Hacker Applications.
+<    * @return {[Application]} - Hackers that aren't attending.
+<    */
+30c20
+<   applications.forEach((application) => {
+---
+>   applications.forEach((applicat) => {
+32c22
+<       broken_hearts.push(application);
+---
+>       broken_hearts.push(applica

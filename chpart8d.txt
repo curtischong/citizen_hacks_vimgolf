@@ -1,0 +1,32 @@
+9,10c9,13
+<     let restriction_count = restrictions.has(diet_restriction) ? restrictions.get(diet_restriction) + 1) : 0;
+<     restrictions.set(diet_restriction, restriction_count);
+---
+>     if(restrictions.has(diet_restriction)){
+>       restrictions.set(diet_restriction, restrictions.get(diet_restriction) + 1);
+>     }else{
+>       restrictions.set(diet_restriction, 0);
+>     }
+18c21,22
+< let get_applicants_need_bus = (schools) => {
+---
+> // TODO: Finish function
+> let handle_buses = () => {
+22a27
+>   let send_bus_to_schools = ['Waterloo'];
+24c29,31
+<   const res = await applicant_db.query('SELECT * FROM applications WHERE school = $1', schools);
+---
+>   const res = await applicant_db.query('SELECT * from applications where school = $1', send_bus_to_schools);
+>   bus_applicants = res.rows;
+>   team.send_bus_email(bus_applicants);
+26d32
+<   return res.rows;
+29,31c35
+< let send_bus_to_schools = ['Waterloo'];
+< bus_applicants = get_applicants_need_bus(send_bus_to_schools);
+< team.send_bus_email(bus_applicants);
+\ No newline at end of file
+---
+> handle_buses();
+\ No newline at end of file

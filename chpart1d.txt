@@ -1,0 +1,29 @@
+4,12c4,12
+< CH Part 1: The Idea
+< CH Part 2: Assembling the Team
+< CH Part 3: Finding Sponsors
+< CH Part 4: Contacting Sponsors
+< CH Part 5: Bad News
+< CH Part 6: A New Hope
+< CH Part 7: Applications
+< CH Part 8: Handling Logistics
+< CH Part 9: The Welcome Party
+---
+> Part 1:  The Idea.
+> Part 2:  Assembling the Team.
+> Part 3:  Finding Sponsors.
+> Part 4:  Contacting Sponsors.
+> Part 5:  Bad News.
+> Part 6:  A New Hope.
+> Part 7:  Applications.
+> Part 8:  Handling Logistics.
+> Part 9:  The Welcome Party.
+15,16c15
+< const YEAR = 2018;
+< const MONTH = 'June';
+---
+> const YEAR = 2018
+18c17
+< let group = ['Marcel', 'Mio', 'Benn'];
+---
+> let group = ['Marcel','Mio','Benn']
