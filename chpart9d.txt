@@ -1,0 +1,14 @@
+1c1
+< // Part 9: The Welcome Party
+---
+> // Part 8: The Welcome Party
+8c8
+< const server = http.createServer((req, res) => {
+---
+> const server = http.createServer((res, req) => {
+12,14c12
+< 000000000000000000000000
+< 0  Thanks for playing  0
+< 000123456789987654321000
+---
+> Thanks for playing

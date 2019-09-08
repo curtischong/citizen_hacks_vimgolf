@@ -1,6 +1,6 @@
 import subprocess
 
-for i in range(1,9):
+for i in range(1,10):
     i = str(i)
     bashCommand = "diff chpart"+i+"a.txt chpart"+i+"p.txt"
 
