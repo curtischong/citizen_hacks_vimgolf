@@ -9,7 +9,7 @@ let october = JSON.parse(fs.readFileSync('October_2019.json', 'utf8'));
 
 october['school'] = true;
 october['free_time'] = 'rip';
-october['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin'];
+october['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Atif', 'Nick'];
 add_members(group, october.new_friends);
 
 let team = new CitizenHacks(group);

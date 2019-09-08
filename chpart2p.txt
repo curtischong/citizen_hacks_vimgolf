@@ -9,7 +9,7 @@ let october_diary = JSON.parse(fs.readFileSync('October_2019.json', 'utf8'))
 
 october_diary['school'] = True
 october_diary['free_time'] = 'rip'
-october_diary['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Audrey', 'Mirjana']
+october_diary['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Atif', 'Nick', 'Audrey', 'Mirjana']
 add_members(group, october_diary.new_friends)
 
 let team = new CitizenHacks(group)

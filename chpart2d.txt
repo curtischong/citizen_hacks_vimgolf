@@ -15,12 +15,12 @@
 10,13c10,13
 < october['school'] = true;
 < october['free_time'] = 'rip';
-< october['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin'];
+< october['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Atif', 'Nick'];
 < add_members(group, october.new_friends);
 ---
 > october_diary['school'] = True
 > october_diary['free_time'] = 'rip'
-> october_diary['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Audrey', 'Mirjana']
+> october_diary['new_friends'] = ['Adam', 'Ahmed', 'Ethan', 'Hrithvik', 'Manvi', 'Sherwin', 'Atif', 'Nick', 'Audrey', 'Mirjana']
 > add_members(group, october_diary.new_friends)
 15,16c15,16
 < let team = new CitizenHacks(group);
